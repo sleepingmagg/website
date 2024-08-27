@@ -1,43 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PolitMC</title>
+    <link rel="stylesheet" href="/src/App.css" />
+    <link rel="icon" type="image/x-icon" href="logo.png" />
+    <script src="App.js"></script>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header class="blur">
+      <a href="index.html"><img class="logo" src="logo.png" alt="logo" width="40" height="40"></a>
+      <span class="logotext">PolitMC</span>
+      <nav class="navigation">
+       <a href="index.html">Home</a>
+       <a href="rules.html">Rules</a>
+       <a href="news.html">News</a>
+       <a href="https://politmc.gitbook.io/politmc-wiki"target="_blank">Wiki</a>
+      </nav>
+      <div class="social-icons">
+        <a href="https://discord.gg/SeWpDGYQTG" target="_blank"><img class="ds" src="ds.png" alt="ds" width="35" height="30"></a>
+        <a href="https://vk.com/politmcbe?from=search" target="_blank"><img class="vk" src="vk.png" alt="vk" width="40" height="40"></a>
+    </div>
+    </header>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <pre><h1 class="Baza">Участвуй в жизни кубических стран на <span class="PolitMC">PolitMC</span></h1></pre>
+    <p class="Baza1">Раскрой свой талант дипломата или будь искусным стратегом в развитии экономики с помощью PolitMC,где уникальные механики сочетаются с производительностью.</p>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div class="news">
+      <h2>Возможности нашего сервера:</h2>
+    <div class="tiles-container">
+      <div class="tile" style="background-image: url('tile1.webp');">
+        <h3>Строй целые города и чудеса света!</h3>
+      </div>
+      <div class="tile" style="background-image: url('tile3.jpg');">
+        <h3>Подчиняй соседей или живи мирно!</h3>
+      </div>
+      <div class="tile" style="background-image: url('tile2.webp');">
+        <h3>Прокачивай свою страну, заключай альянсы и веди политические интриги!</h3>
+      </div>
+      <div class="tile" style="background-image: url('tile4.png');">
+        <h3>Захвати мир экономический!</h3>
+      </div>
+    </div>
+  </div>
+    <div class="slider-container">
+      <button class="slider-arrow left-arrow">&#9664;</button>
+      <div class="slider-content">
+          <div class="slider-wrapper">
+              <div class="slider-item active">
+                  <h2>Открытие сервера!</h2>
+                  <p>Сервер откроется 2 июля, подпишись на соц.сети чтобы не пропустить!</p>
+              </div>
+              <div class="slider-item">
+                  <h2>Помощь в развитии!</h2>
+                  <p>Вы можете предложить свою помощь в развитии сервера.</p>
+              </div>
+              <div class="slider-item">
+                  <h2>Больше информации!</h2>
+                  <p>Загляните в наше <a href="https://politmc.gitbook.io/politmc-wiki">Wiki</a> чтобы узнать больше информации!</p>
+              </div>
+              <div class="slider-item">
+                <h2>Нашли ошибку?</h2>
+                <p>Быстрее напиши об этом в <a href="https://discord.gg/SeWpDGYQTG">Dicord</a> и получи награду!</p>
+            </div>
+          </div>
+      </div>
+      <button class="slider-arrow right-arrow">&#9654;</button>
+  </div>
+  
+  
+    <div class="steps-container">
+      <h2>Как зайти на <span class="PolitMC">сервер?</span></h2>
+      <div class="steps-grid">
+        <div class="step">
+          <img src="step1.png" alt="Шаг 1">
+          <h3>ШАГ 1.</h3>
+          <p>Зайдите в игру Minecraft и нажмите на кнопку “Играть”</p>
+        </div>
+        <div class="step">
+          <img src="step2.png" alt="Шаг 2">
+          <h3>ШАГ 2.</h3>
+          <p>Нажмите кнопку “Cерверы“ и “Добавить сервер“ введите адрес сервера, порт 19132 <br>Адрес: soon...</p>
+        </div>
+        <div class="step">
+          <img src="step3.png" alt="Шаг 3">
+          <h3>ГОТОВО!</h3>
+          <p>Чтобы зайти скачайте предложенный сервером текстур-пак и наслаждайтесь игрой!</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="end">
+      <div class="footer-links">
+        <a href="https://discord.gg/SeWpDGYQTG" target="_blank"><img class="footer-icon" src="ds.png" alt="Discord" width="35" height="30"></a>
+        <a href="https://vk.com/politmcbe?from=search" target="_blank"><img class="footer-icon" src="vk.png" alt="VK" width="35" height="30"></a>
+      </div>
+      <span>Ⓒ2020-2024 Все права защищены. Неформальная организация "Романов"</span>
+    </div>
   </body>
 </html>

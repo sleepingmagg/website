@@ -1,48 +1,23 @@
-import React, { useState } from 'react';
+document.addEventListener('DOMContentLoaded', () => {
+    const sliderItems = document.querySelectorAll('.slider-item');
+    let currentIndex = 0;
 
-function App() {
-  const [tasks, setTasks] = useState([]);
-  const [input, setInput] = useState('');
-
-  const addTask = () => {
-    if (input.trim()) {
-      setTasks([...tasks, input.trim()]);
-      setInput('');
+    function showSlide(index) {
+        sliderItems.forEach((item, i) => {
+            item.classList.remove('active');
+        });
+        sliderItems[index].classList.add('active');
     }
-  };
 
-  const removeTask = (index) => {
-    const newTasks = [...tasks];
-    newTasks.splice(index, 1);
-    setTasks(newTasks);
-  };
+    document.querySelector('.left-arrow').addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : sliderItems.length - 1;
+        showSlide(currentIndex);
+    });
 
-  return (
-    <div style={{ padding: '20px' }}>
-      <h1>To-Do List</h1>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Add a new task"
-        style={{ padding: '10px', width: '200px', marginRight: '10px' }}
-      />
-      <button onClick={addTask} style={{ padding: '10px' }}>Add Task</button>
-      <ul style={{ listStyleType: 'none', padding: '0' }}>
-        {tasks.map((task, index) => (
-          <li key={index} style={{ margin: '10px 0' }}>
-            {task}
-            <button
-              onClick={() => removeTask(index)}
-              style={{ marginLeft: '10px', padding: '5px' }}
-            >
-              Remove
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+    document.querySelector('.right-arrow').addEventListener('click', () => {
+        currentIndex = (currentIndex < sliderItems.length - 1) ? currentIndex + 1 : 0;
+        showSlide(currentIndex);
+    });
 
-export default App;
+    showSlide(currentIndex);
+});
